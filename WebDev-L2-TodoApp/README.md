@@ -17,6 +17,16 @@ Interactive to-do list application for managing daily tasks — add, complete, e
 - Friendly empty-state messaging when a list has no items
 - 2-second branded splash animation on load
 
+## Screenshots
+
+| Splash screen | App (desktop) |
+| --- | --- |
+| ![Splash](screenshots/splash.png) | ![App desktop](screenshots/app-desktop.png) |
+
+| Empty state | Inline editing | Mobile view |
+| --- | --- | --- |
+| ![Empty state](screenshots/empty-state.png) | ![Editing](screenshots/editing.png) | ![Mobile](screenshots/app-mobile.png) |
+
 ## Tech Stack
 
 - HTML5
@@ -38,5 +48,6 @@ python -m http.server 8000
 ├── index.html   # Markup: splash, add form, pending/completed sections
 ├── style.css    # Styling: dark theme, animations, responsive
 ├── script.js    # Logic: CRUD, counts, timestamps, localStorage persistence
+├── screenshots/ # App preview images
 └── README.md
 ```
