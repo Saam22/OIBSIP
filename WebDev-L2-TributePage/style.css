@@ -45,6 +45,51 @@ a { color: inherit; }
 
 ::selection { background: var(--gold); color: var(--ink); }
 
+/* ============================================================
+   Splash screen (shows for 2s before the page)
+   ============================================================ */
+.splash {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: radial-gradient(ellipse 120% 90% at 50% 0%, #262F58 0%, var(--ink) 55%, #141A34 100%);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+.splash.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.splash-name {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  margin: 0;
+  color: var(--cream-text);
+}
+.splash-role {
+  font-family: var(--sans);
+  font-size: 1.02rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--gold);
+}
+.splash-task {
+  font-family: var(--accent-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  margin: 0;
+  color: var(--muted-light);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }

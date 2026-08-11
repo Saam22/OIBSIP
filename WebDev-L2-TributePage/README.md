@@ -45,24 +45,23 @@ python3 -m http.server 5500
 ```
 tribute-ibn-al-haytham/
 ├── index.html      # page structure
-├── styles.css       # all styling, colors, and typography
+├── style.css       # all styling, colors, and typography
 ├── script.js        # optional JS enhancements (scroll reveal)
+├── screenshots/     # desktop + mobile screenshots
 └── README.md         # this file
 ```
 
 ## Screenshots
-To add screenshots to the GitHub repo:
 
-1. Run the page locally as described in "How to Run"
-2. Capture at least the hero section and the timeline section (desktop + mobile view via DevTools)
-3. Put the images in a new `screenshots/` folder inside the project
-4. Add them here like this:
+![Hero Section — Desktop](screenshots/hero.png)
 
-```markdown
-![Hero Section](screenshots/hero.png)
-![Timeline Section](screenshots/timeline.png)
-![Mobile View](screenshots/mobile.png)
-```
+![Timeline Section — Desktop](screenshots/timeline.png)
+
+![Quote Section — Desktop](screenshots/quote.png)
+
+![Hero Section — Mobile (375px)](screenshots/mobile-hero.png)
+
+![Timeline Section — Mobile (375px)](screenshots/mobile-timeline.png)
 
 ## Sources
 - Text content: [Wikipedia – Ibn al-Haytham](https://en.wikipedia.org/wiki/Ibn_al-Haytham) (fully paraphrased) and [Britannica – Ibn al-Haytham](https://www.britannica.com/biography/Ibn-al-Haytham)

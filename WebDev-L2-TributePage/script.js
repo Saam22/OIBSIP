@@ -4,6 +4,14 @@
 // 2) a soft "light" glow that follows the cursor, echoing the pinhole theme
 
 (function () {
+  // --- Splash screen (hides after 2 seconds) ------------------------
+  var splash = document.getElementById('splash');
+  if (splash) {
+    setTimeout(function () {
+      splash.classList.add('hidden');
+    }, 2000);
+  }
+
   // --- Scroll reveal -------------------------------------------------
   var revealTargets = document.querySelectorAll(
     '.bio-columns p, .tl-card, .quote-wrap, .legacy-inner'
