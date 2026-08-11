@@ -1,6 +1,11 @@
 const displayExpression = document.getElementById("displayExpression");
 const displayResult = document.getElementById("displayResult");
 
+const splash = document.getElementById("splash");
+setTimeout(() => {
+  splash.classList.add("hidden");
+}, 2000);
+
 const numberButtons = document.querySelectorAll("[data-number]");
 const operatorButtons = document.querySelectorAll("[data-operator]");
 const equalsButton = document.querySelector("[data-equals]");
