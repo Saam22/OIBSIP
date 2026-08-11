@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ibn al-Haytham — The Eye That Questioned Light</title>
+<meta name="description" content="A tribute to Ibn al-Haytham (Alhazen), the 11th-century scholar who founded the scientific method and modern optics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="ray-cursor" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <span class="mark">Ibn al-Haytham</span>
+    <nav class="header-nav">
+      <a href="#biography">Life</a>
+      <a href="#timeline">Legacy</a>
+      <a href="#quote">Words</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="pinhole-rig" aria-hidden="true">
+      <svg viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" class="ray-svg">
+        <defs>
+          <linearGradient id="rayGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#C89B3C" stop-opacity="0"/>
+            <stop offset="50%" stop-color="#C89B3C" stop-opacity="0.55"/>
+            <stop offset="100%" stop-color="#C89B3C" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <g class="ray-group">
+          <line x1="0" y1="120" x2="560" y2="350" class="ray" style="--d:0"/>
+          <line x1="0" y1="230" x2="560" y2="350" class="ray" style="--d:0.15"/>
+          <line x1="0" y1="350" x2="560" y2="350" class="ray" style="--d:0.3"/>
+          <line x1="0" y1="470" x2="560" y2="350" class="ray" style="--d:0.45"/>
+          <line x1="0" y1="580" x2="560" y2="350" class="ray" style="--d:0.6"/>
+          <line x1="560" y1="350" x2="1200" y2="580" class="ray" style="--d:0.15"/>
+          <line x1="560" y1="350" x2="1200" y2="470" class="ray" style="--d:0.3"/>
+          <line x1="560" y1="350" x2="1200" y2="350" class="ray" style="--d:0.45"/>
+          <line x1="560" y1="350" x2="1200" y2="230" class="ray" style="--d:0.6"/>
+          <line x1="560" y1="350" x2="1200" y2="120" class="ray" style="--d:0.75"/>
+        </g>
+        <circle cx="560" cy="350" r="5" fill="#F5EFE0"/>
+      </svg>
+    </div>
+
+    <div class="wrap hero-inner">
+      <p class="eyebrow">Basra, c. 965 &nbsp;—&nbsp; Cairo, c. 1040</p>
+      <h1 class="hero-title">Ibn al-Haytham</h1>
+      <p class="tagline">He aimed a pinhole at the sun and, in the dark room it lit, found the beginning of modern science.</p>
+
+      <figure class="portrait-figure">
+        <img
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Ibn%20al-Haytham.png"
+          alt="Portrait of Ibn al-Haytham as depicted on the 1982 Iraqi ten-dinar banknote"
+          class="portrait"
+          width="700" height="900"
+          loading="eager">
+        <figcaption>Ibn al-Haytham as depicted on the 1982 Iraqi ten-dinar note · Wikimedia Commons</figcaption>
+      </figure>
+    </div>
+    <div class="scroll-cue" aria-hidden="true"><span></span>Book of Optics, seven volumes below</div>
+  </section>
+
+  <!-- BIOGRAPHY -->
+  <section class="biography" id="biography">
+    <div class="wrap">
+      <h2 class="section-title"><span class="section-num">I.</span> A Life in the Margins of Power</h2>
+
+      <div class="bio-columns">
+        <p>Abū ʿAlī al-Ḥasan ibn al-Ḥasan ibn al-Haytham was born around the year 965 in Basra, then a thriving hub of trade and scholarship on the edge of the Persian Gulf. Little is recorded of his early years, but by adulthood he had absorbed the mathematics of Euclid and Ptolemy, the logic of Aristotle, and the administrative training that let him serve briefly as a civil official — a post he reportedly abandoned so he could devote himself entirely to study.</p>
+
+        <p>His reputation for mathematical insight eventually reached the Fatimid court in Cairo, and he was invited by Caliph al-Hakim to solve a problem that had defeated engineers for centuries: regulating the annual flood of the Nile. Ibn al-Haytham traveled south to inspect the river at Aswan and concluded, correctly, that no structure of the era could tame it. Fearing the caliph's famously volatile temper, legend holds that he feigned madness to escape punishment for the failed commission, and was placed under house arrest for roughly a decade.</p>
+
+        <p>That confinement became the most productive stretch of his life. Working largely alone, he built a dim chamber pierced with a small hole and used it to study how light traveled — the same principle later known as the camera obscura. From those observations grew the seven-volume Kitab al-Manazir, the Book of Optics, in which he overturned the ancient belief that the eye emits rays to "touch" objects, arguing instead that vision occurs when light reflected from objects enters the eye. He backed the claim with controlled experiments, repeatable measurements, and a willingness to discard elegant theories that the evidence didn't support.</p>
+
+        <p>That habit of testing ideas against experiment, rather than trusting authority or intuition alone, is why historians of science now credit him as one of the earliest practitioners of what would become the scientific method. His optical work traveled west through Latin translations of his treatise, shaping the writings of Roger Bacon, Johannes Kepler, and eventually Isaac Newton. He died in Cairo around 1040, having spent his final years continuing to write on astronomy, mathematics, and the physics of light.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE / ACHIEVEMENTS -->
+  <section class="timeline" id="timeline">
+    <div class="wrap">
+      <h2 class="section-title light"><span class="section-num">II.</span> What the Dark Room Produced</h2>
+      <ol class="tl-list">
+
+        <li class="tl-card">
+          <span class="tl-year">c. 965</span>
+          <div class="tl-body">
+            <h3>Born in Basra</h3>
+            <p>Raised in a major intellectual center of the Islamic Golden Age, where he studied mathematics, astronomy, and Greek natural philosophy.</p>
+          </div>
+        </li>
+
+        <li class="tl-card">
+          <span class="tl-year">c. 1010s</span>
+          <div class="tl-body">
+            <h3>House arrest in Cairo</h3>
+            <p>After his Nile-control proposal failed, ten years of confinement gave him uninterrupted time to experiment and write.</p>
+          </div>
+        </li>
+
+        <li class="tl-card">
+          <span class="tl-year">Book I–VII</span>
+          <div class="tl-body">
+            <h3>Kitab al-Manazir (Book of Optics)</h3>
+            <p>A seven-volume study proving vision works by light entering the eye, built entirely on reproducible experiments rather than inherited assumption.</p>
+          </div>
+        </li>
+
+        <li class="tl-card">
+          <span class="tl-year">Camera obscura</span>
+          <div class="tl-body">
+            <h3>Pinhole projection described</h3>
+            <p>He documented how light passing through a small aperture into a darkened room projects an inverted image — the working principle behind the modern camera.</p>
+          </div>
+        </li>
+
+        <li class="tl-card">
+          <span class="tl-year">A geometry problem</span>
+          <div class="tl-body">
+            <h3>"Alhazen's Problem"</h3>
+            <p>He posed and partially solved a classic optics-and-geometry puzzle — finding the point on a curved mirror where light reflects from a source to an observer — that occupied mathematicians for centuries after him.</p>
+          </div>
+        </li>
+
+        <li class="tl-card">
+          <span class="tl-year">12th–13th c.</span>
+          <div class="tl-body">
+            <h3>Translated into Latin as "Alhazen"</h3>
+            <p>His optical treatises reached European scholars, shaping the work of Roger Bacon, Witelo, and later Johannes Kepler's theory of the retinal image.</p>
+          </div>
+        </li>
+
+        <li class="tl-card">
+          <span class="tl-year">2015 CE</span>
+          <div class="tl-body">
+            <h3>UNESCO's International Year of Light</h3>
+            <p>The United Nations marked the millennium of his Book of Optics by dedicating a global year of science outreach partly in his honor.</p>
+          </div>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="quote-section" id="quote">
+    <div class="wrap quote-wrap">
+      <svg class="quote-mark" viewBox="0 0 60 44" aria-hidden="true">
+        <path d="M0 44V22.8C0 9.9 8.4 1.3 21.1 0l2.1 6.1C15 8 10.6 12.9 10.1 20.4h11V44H0zm31.9 0V22.8C31.9 9.9 40.3 1.3 53 0l2 6.1c-8.1 1.9-12.5 6.8-13 14.3h11V44H31.9z" fill="currentColor"/>
+      </svg>
+      <blockquote>
+        <p>The seeker after truth does not put his faith in any mere authority, but rather questions what he has learned from it — subjecting it to doubt, and to proof by argument and experiment, not by the assertions of those who came before.</p>
+        <footer>— attributed to Ibn al-Haytham, in the doubts he raised against Ptolemy's astronomy</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- WHY IT MATTERS -->
+  <section class="legacy">
+    <div class="wrap legacy-inner">
+      <h2 class="section-title"><span class="section-num">III.</span> Why the Room Still Matters</h2>
+      <p>Every camera lens, every eye chart, every claim that gets tested by experiment before it is believed — all of it sits downstream of a man who built a dark room to argue with a thousand years of assumption. Ibn al-Haytham didn't just study light; he insisted that ideas, however old or well-regarded, have to survive contact with evidence. That insistence is the part of him worth carrying forward.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>A tribute page built for study purposes. Biographical content paraphrased from Wikipedia and Encyclopaedia Britannica. Portrait via Wikimedia Commons.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

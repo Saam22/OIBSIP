@@ -1,0 +1,396 @@
+/* ============================================================
+   Ibn al-Haytham — Tribute Page
+   Design tokens
+   ============================================================ */
+:root {
+  --ink:        #1B2340;   /* deep manuscript-night indigo */
+  --ink-2:      #232C52;   /* slightly lifted indigo for cards */
+  --parchment:  #EDE3D0;   /* aged paper */
+  --parchment-2:#E3D6BC;   /* deeper paper shade for contrast */
+  --gold:       #C89B3C;   /* illumination gold */
+  --copper:     #A85C32;   /* warm accent / links */
+  --cream-text: #F5EFE0;   /* text on dark */
+  --slate-text: #3A3226;   /* text on light */
+  --muted-light:#B9BEDB;   /* muted text on dark */
+  --muted-dark: #6B5F4C;   /* muted text on light */
+
+  --serif: 'Amiri', 'Cormorant Garamond', Georgia, serif;
+  --accent-serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --wrap: 1080px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--parchment);
+  color: var(--slate-text);
+  font-family: var(--sans);
+  font-weight: 400;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+.wrap {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+a { color: inherit; }
+
+::selection { background: var(--gold); color: var(--ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
+
+/* ============================================================
+   Header
+   ============================================================ */
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 50;
+  background: rgba(27, 35, 64, 0.72);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(200, 155, 60, 0.25);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+.mark {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+}
+.header-nav { display: flex; gap: 28px; }
+.header-nav a {
+  color: var(--muted-light);
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+.header-nav a:hover { color: var(--gold); }
+
+/* ============================================================
+   Hero
+   ============================================================ */
+.hero {
+  position: relative;
+  background: radial-gradient(ellipse 120% 90% at 50% 0%, #262F58 0%, var(--ink) 55%, #141A34 100%);
+  color: var(--cream-text);
+  padding: 150px 0 90px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.pinhole-rig {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.9;
+}
+.ray-svg { width: 100%; height: 100%; }
+.ray {
+  stroke: url(#rayGrad);
+  stroke-width: 1.5;
+  stroke-dasharray: 8 10;
+  opacity: 0;
+  animation: rayFade 5s ease-in-out infinite;
+  animation-delay: calc(var(--d) * 1s);
+}
+@keyframes rayFade {
+  0%, 100% { opacity: 0; }
+  30%, 60% { opacity: 1; }
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 18px;
+}
+.hero-title {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(2.8rem, 7vw, 5.2rem);
+  margin: 0 0 22px;
+  letter-spacing: 0.01em;
+}
+.tagline {
+  font-family: var(--accent-serif);
+  font-style: italic;
+  font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+  color: var(--muted-light);
+  max-width: 640px;
+  margin: 0 auto 56px;
+}
+
+.portrait-figure {
+  margin: 0 auto;
+  max-width: 300px;
+}
+.portrait {
+  width: 100%;
+  aspect-ratio: 700/900;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid rgba(200, 155, 60, 0.45);
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,0.6), 0 0 0 10px rgba(237,227,208,0.04);
+}
+.portrait-figure figcaption {
+  margin-top: 14px;
+  font-size: 0.75rem;
+  color: var(--muted-light);
+  letter-spacing: 0.02em;
+}
+
+.scroll-cue {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-top: 70px;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.scroll-cue span {
+  width: 1px;
+  height: 34px;
+  background: linear-gradient(var(--gold), transparent);
+  display: inline-block;
+}
+
+/* ============================================================
+   Section title shared
+   ============================================================ */
+.section-title {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(1.7rem, 3.4vw, 2.4rem);
+  margin: 0 0 44px;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+.section-num {
+  font-family: var(--accent-serif);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--copper);
+  font-size: 0.6em;
+}
+.section-title.light .section-num { color: var(--gold); }
+
+/* ============================================================
+   Biography
+   ============================================================ */
+.biography {
+  background: var(--parchment);
+  padding: 110px 0;
+  border-bottom: 1px solid var(--parchment-2);
+}
+.bio-columns {
+  columns: 1;
+  max-width: 760px;
+}
+.bio-columns p {
+  font-size: 1.06rem;
+  margin: 0 0 26px;
+  color: var(--slate-text);
+}
+.bio-columns p:first-of-type::first-letter {
+  font-family: var(--serif);
+  font-size: 3.4em;
+  float: left;
+  line-height: 0.8;
+  padding: 0.05em 0.09em 0 0;
+  color: var(--copper);
+}
+
+/* ============================================================
+   Timeline
+   ============================================================ */
+.timeline {
+  background: linear-gradient(180deg, var(--ink) 0%, #171F3E 100%);
+  color: var(--cream-text);
+  padding: 110px 0;
+}
+.tl-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 18px;
+}
+.tl-card {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 26px;
+  align-items: start;
+  padding: 26px 28px;
+  background: rgba(245, 239, 224, 0.04);
+  border: 1px solid rgba(200, 155, 60, 0.18);
+  border-left: 3px solid var(--gold);
+  border-radius: 2px;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+.tl-card:hover {
+  background: rgba(245, 239, 224, 0.075);
+  transform: translateX(4px);
+}
+.tl-year {
+  font-family: var(--accent-serif);
+  font-style: italic;
+  color: var(--gold);
+  font-size: 1.05rem;
+  padding-top: 2px;
+}
+.tl-body h3 {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+.tl-body p {
+  margin: 0;
+  color: var(--muted-light);
+  font-size: 0.96rem;
+}
+
+/* ============================================================
+   Quote
+   ============================================================ */
+.quote-section {
+  background: linear-gradient(120deg, var(--copper) 0%, #8F4A26 100%);
+  color: var(--cream-text);
+  padding: 100px 0;
+}
+.quote-wrap { max-width: 780px; position: relative; }
+.quote-mark {
+  width: 52px;
+  height: 38px;
+  color: rgba(245, 239, 224, 0.4);
+  margin-bottom: 18px;
+}
+blockquote {
+  margin: 0;
+}
+blockquote p {
+  font-family: var(--accent-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  line-height: 1.5;
+  margin: 0 0 26px;
+}
+blockquote footer {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  color: rgba(245, 239, 224, 0.85);
+}
+blockquote footer::before { content: '— '; opacity: 0; }
+
+/* ============================================================
+   Legacy closer
+   ============================================================ */
+.legacy {
+  background: var(--parchment-2);
+  padding: 100px 0 120px;
+}
+.legacy-inner { max-width: 760px; }
+.legacy p {
+  font-size: 1.1rem;
+  color: var(--slate-text);
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.site-footer {
+  background: var(--ink);
+  color: var(--muted-light);
+  padding: 34px 0;
+}
+.footer-inner p {
+  margin: 0;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* ============================================================
+   Custom cursor ray glow (desktop only, decorative)
+   ============================================================ */
+.ray-cursor {
+  position: fixed;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(200,155,60,0.10) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+@media (hover: hover) and (pointer: fine) {
+  .ray-cursor { opacity: 1; }
+}
+
+/* ============================================================
+   Reveal-on-scroll
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 720px) {
+  .header-nav { gap: 16px; }
+  .header-nav a { font-size: 0.72rem; }
+  .hero { padding: 130px 0 70px; }
+  .tl-card {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .biography, .timeline, .quote-section, .legacy { padding: 72px 0; }
+  .bio-columns p:first-of-type::first-letter { font-size: 2.8em; }
+}
+
+@media (max-width: 480px) {
+  .wrap { padding: 0 20px; }
+  .mark { font-size: 1.15rem; }
+  .header-nav a:nth-child(2) { display: inline; }
+}
