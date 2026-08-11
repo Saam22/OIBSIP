@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do Web App | Saad Mohamed Hassan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="splash" id="splash">
+    <div class="splash-inner">
+      <div class="splash-logo">&#10003;</div>
+      <h1 class="splash-title">To-Do Web App</h1>
+      <p class="splash-sub">Saad Mohamed Hassan — Web Development & Designing Task 3
+
+</p>
+      <div class="spinner"></div>
+    </div>
+  </div>
+
+  <main class="app hidden" id="app">
+    <header class="app-header">
+      <div class="header-icon">&#10003;</div>
+      <div>
+        <h1 class="app-title">To-Do Web App</h1>
+        <p class="app-subtitle">Saad Mohamed Hassan &mdash; Web Development &amp; Designing Task 3</p>
+      </div>
+    </header>
+
+    <form class="add-form" id="addForm">
+      <input type="text" id="taskInput" class="task-input" placeholder="What needs to be done?" maxlength="200" autocomplete="off">
+      <button type="submit" class="add-btn" id="addBtn">+ Add Task</button>
+    </form>
+
+    <section class="list-section">
+      <div class="list-header">
+        <h2 class="list-title">Pending Tasks</h2>
+        <span class="count-badge" id="pendingCount">0 pending</span>
+      </div>
+      <ul class="task-list" id="pendingList"></ul>
+      <p class="empty-state hidden" id="pendingEmpty">Nothing to do &mdash; add your first task above! &#127793;</p>
+    </section>
+
+    <section class="list-section">
+      <div class="list-header">
+        <h2 class="list-title">Completed Tasks</h2>
+        <span class="count-badge completed" id="completedCount">0 completed</span>
+      </div>
+      <ul class="task-list" id="completedList"></ul>
+      <p class="empty-state hidden" id="completedEmpty">No completed tasks yet. Get started! &#128170;</p>
+    </section>
+
+    <footer class="app-footer">
+      <p>Tip: Press <kbd>Enter</kbd> to add a task &middot; <kbd>Esc</kbd> cancels editing</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
