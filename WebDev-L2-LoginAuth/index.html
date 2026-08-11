@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saad Mohamed Hassan — Login Authentication System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="splash" class="splash">
+    <div class="splash-inner">
+      <div class="splash-logo">Saad Mohamed Hassan</div>
+      <div class="splash-sub">Web Development &amp; Designing &mdash; Task 4</div>
+      <div class="splash-title">Login Authentication System</div>
+      <div class="splash-loader"><span></span></div>
+    </div>
+  </div>
+
+  <main id="app" class="app hidden">
+    <section class="card" id="authCard">
+      <div class="brand">
+        <h1>Saad Mohamed Hassan</h1>
+        <p>Web Development &amp; Designing &mdash; Task 4<br />Login Authentication System</p>
+      </div>
+
+      <div class="tabs">
+        <button type="button" class="tab active" data-tab="login">Login</button>
+        <button type="button" class="tab" data-tab="register">Register</button>
+      </div>
+
+      <div class="error-box hidden" id="errorBox" role="alert"></div>
+      <div class="success-box hidden" id="successBox" role="status"></div>
+
+      <form id="loginForm" class="auth-form" novalidate>
+        <label for="loginId">Username or Email</label>
+        <input type="text" id="loginId" name="loginId" autocomplete="username" placeholder="Enter your username or email" />
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" name="loginPassword" autocomplete="current-password" placeholder="Enter your password" />
+        <button type="submit" class="btn-primary" id="loginBtn">Login</button>
+        <p class="switch-hint">Don't have an account? <a href="#" id="goRegister">Register now</a></p>
+      </form>
+
+      <form id="registerForm" class="auth-form hidden" novalidate>
+        <label for="regUsername">Username</label>
+        <input type="text" id="regUsername" name="regUsername" autocomplete="username" placeholder="Choose a username" />
+        <label for="regEmail">Email</label>
+        <input type="email" id="regEmail" name="regEmail" autocomplete="email" placeholder="you@example.com" />
+        <label for="regPassword">Password</label>
+        <input type="password" id="regPassword" name="regPassword" autocomplete="new-password" placeholder="Min 8 chars, at least 1 number" />
+        <label for="regConfirm">Confirm Password</label>
+        <input type="password" id="regConfirm" name="regConfirm" autocomplete="new-password" placeholder="Re-enter your password" />
+        <button type="submit" class="btn-primary" id="registerBtn">Register</button>
+        <p class="switch-hint">Already have an account? <a href="#" id="goLogin">Login here</a></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

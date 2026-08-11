@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — Login Authentication System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="dashboard">
+
+  <nav class="navbar">
+    <div class="nav-brand">Saad Mohamed Hassan</div>
+    <div class="nav-sub">Web Development &amp; Designing &mdash; Task 4</div>
+    <button type="button" class="btn-logout" id="logoutBtn">Logout</button>
+  </nav>
+
+  <main class="app dashboard-app">
+    <section class="card dashboard-card">
+      <div class="avatar" id="avatar">S</div>
+      <h1>Welcome, <span id="welcomeName">User</span>!</h1>
+      <p class="dashboard-sub">You have successfully logged in to the protected dashboard.</p>
+      <div class="user-meta" id="userMeta"></div>
+      <p class="hint">Only authenticated users can see this page &mdash; visiting it directly without a session redirects you to the login page.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
